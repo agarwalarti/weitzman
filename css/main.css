@@ -24,11 +24,11 @@
 
   /* Section accent colours */
   --solow:       #7A1603;   /* The Solow Room       — theory              */
-  --pigou:       #042C4E;   /* The Pigou Lab        — empirics             */
-  --krutilla:    #BF9000;   /* The Krutilla Gallery — transdisciplinary    */
+  --pigou:       #004AAD;   /* The Pigou Lab        — empirics             */
+  --krutilla:    #FEBE10;   /* The Krutilla Gallery — transdisciplinary    */
   --long:        #1B4332;   /* The Long Equilibrium — game theory          */
   --nordhaus:    #2E3F50;   /* The Nordhaus Index   — data & repos         */
-  --gazette:     #5B2D8E;   /* The Gazette          — essays & analysis    */
+  --gazette:     #440939;   /* The Gazette          — essays & analysis    */
 
   /* Typography scale */
   --f-xs:        0.65rem;
