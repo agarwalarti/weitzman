@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Prices vs. Quantities — Weitzman 1974 | The Weitzman Archive</title>
+  <meta name="description" content="When regulators face uncertainty about abatement costs, should they set a price or a quantity limit? Weitzman 1974 — explained in plain English, with full Marshall Notes.">
+  <link rel="canonical" href="https://weitzmanarchive.com/weitzman-1974-prices-quantities.html">
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Prices vs. Quantities",
+    "author": { "@type": "Person", "name": "Martin L. Weitzman" },
+    "datePublished": "1974",
+    "isPartOf": { "@type": "Periodical", "name": "Quarterly Journal of Economics" },
+    "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.2307/1883176" },
+    "description": "When regulators face uncertainty about abatement costs, the welfare consequences of choosing between price and quantity instruments depend on a single ratio — the slopes of the marginal benefit and cost curves."
+  }
+  </script>
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="Prices vs. Quantities — Weitzman 1974">
+  <meta property="og:description" content="When regulators face uncertainty about abatement costs, should they set a price or a quantity limit? The foundational result in instrument choice, explained.">
+  <meta property="og:url"         content="https://weitzmanarchive.com/weitzman-1974-prices-quantities.html">
+  <meta property="og:image"       content="https://weitzmanarchive.com/assets/images/sections/solow-room.jpg">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📜</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Castoro:ital@0;1&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/article.css">
+
+  <!-- Section accent for this page -->
+  <style>
+    :root { --accent: #7A1603; }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ──────────────────────────────────────────── -->
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="site-wordmark">The Weitzman Archive</a>
+    <div class="nav-right">
+
+      <div class="nav-item">
+        <button class="nav-btn" aria-expanded="false" aria-haspopup="true">
+          Sections
+          <svg class="chevron" viewBox="0 0 10 6" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="nav-dropdown" role="menu">
+          <div class="nav-dropdown-section">
+            <span class="nav-dropdown-label">Named Sections</span>
+            <a href="solow-room.html" role="menuitem" aria-current="true">
+              <span class="nav-dot" style="background:#7A1603"></span>The Solow Room — Theory
+            </a>
+            <a href="pigou-lab.html" role="menuitem">
+              <span class="nav-dot" style="background:#042C4E"></span>The Pigou Lab — Empirics
+            </a>
+            <a href="krutilla-gallery.html" role="menuitem">
+              <span class="nav-dot" style="background:#BF9000"></span>The Krutilla Gallery — Transdisciplinary
+            </a>
+            <a href="long-equilibrium.html" role="menuitem">
+              <span class="nav-dot" style="background:#1B4332"></span>The Long Equilibrium — Game Theory
+            </a>
+            <a href="nordhaus-index.html" role="menuitem">
+              <span class="nav-dot" style="background:#2E3F50"></span>The Nordhaus Index — Data &amp; Repos
+            </a>
+          </div>
+          <div class="nav-dropdown-section">
+            <a href="gazette.html" role="menuitem">
+              <span class="nav-dot" style="background:#5B2D8E"></span>The Gazette
+            </a>
+            <a href="ciriacy-wantrup.html" role="menuitem">
+              <span class="nav-dot" style="background:#888"></span>Ciriacy-Wantrup — Timeline
+            </a>
+            <a href="marshall-notes.html" role="menuitem">
+              <span class="nav-dot" style="background:#888"></span>Marshall Notes
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <button class="nav-btn" aria-expanded="false" aria-haspopup="true">
+          JEL Codes
+          <svg class="chevron" viewBox="0 0 10 6" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="nav-dropdown" role="menu">
+          <div class="nav-dropdown-section">
+            <span class="nav-dropdown-label">Environmental &amp; Resource</span>
+            <a href="jel-q5.html" role="menuitem"><span class="nav-dot" style="background:#7A1603"></span>Q5 — Environmental Economics</a>
+            <a href="jel-q3.html" role="menuitem"><span class="nav-dot" style="background:#7A1603"></span>Q3 — Nonrenewable Resources</a>
+            <a href="jel-q1.html" role="menuitem"><span class="nav-dot" style="background:#7A1603"></span>Q1 — Agriculture</a>
+          </div>
+          <div class="nav-dropdown-section">
+            <span class="nav-dropdown-label">Related</span>
+            <a href="jel-d8.html" role="menuitem"><span class="nav-dot" style="background:#888"></span>D8 — Information &amp; Uncertainty</a>
+            <a href="jel-h2.html" role="menuitem"><span class="nav-dot" style="background:#888"></span>H2 — Taxation &amp; Subsidies</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-sep" aria-hidden="true"></div>
+      <a href="papers.html"  class="nav-link">Search</a>
+      <a href="about.html"   class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── MAIN ────────────────────────────────────────────────── -->
+<main class="page" id="main-content">
+
+  <!-- Masthead -->
+  <header class="article-masthead">
+    <div class="article-kicker">
+      <span class="article-section-badge">Solow Room</span>
+      <span class="article-kicker-journal">Quarterly Journal of Economics, 1974</span>
+    </div>
+    <h1 class="article-title">Prices vs. Quantities</h1>
+    <p class="article-subtitle">
+      When regulators cannot observe abatement costs, the choice of instrument is not
+      neutral — and the welfare stakes depend on a single ratio.
+    </p>
+    <div class="article-meta-bar">
+      <div class="meta-cell">
+        <span class="meta-cell-label">Paper Author</span>
+        <span class="meta-cell-val">Martin L. Weitzman</span>
+      </div>
+      <div class="meta-cell">
+        <span class="meta-cell-label">Journal</span>
+        <span class="meta-cell-val">Quarterly Journal of Economics</span>
+      </div>
+      <div class="meta-cell">
+        <span class="meta-cell-label">Year</span>
+        <span class="meta-cell-val">1974</span>
+      </div>
+      <div class="meta-cell">
+        <span class="meta-cell-label">Entry Author</span>
+        <span class="meta-cell-val">Arti Agarwal</span>
+      </div>
+      <div class="meta-cell">
+        <span class="meta-cell-label">Entry Date</span>
+        <span class="meta-cell-val muted">September 2026</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero image — replace src when a real image is available -->
+  <div class="article-hero">
+    <svg width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18"/>
+      <path d="M3 9h18M9 21V9"/>
+    </svg>
+    <span class="article-hero-label">SOLOW ROOM</span>
+  </div>
+
+  <!-- Two-column layout -->
+  <div class="article-layout">
+
+    <!-- ── LEFT: Main content ───────────────────────────────── -->
+    <div class="article-main">
+
+      <!-- Three-layer accordion -->
+      <div class="accordion" role="region" aria-label="Article content">
+
+        <!-- Layer 1: In Plain English (open by default) -->
+        <div class="acc-item">
+          <button class="acc-trigger" aria-expanded="true" aria-controls="layer-1">
+            <span class="acc-trigger-label">In Plain English</span>
+            <span class="acc-trigger-layer">Layer 1 of 3</span>
+            <span class="acc-icon" aria-hidden="true">
+              <svg viewBox="0 0 10 10">
+                <line x1="5" y1="1" x2="5" y2="9" stroke-linecap="round"/>
+                <line x1="1" y1="5" x2="9" y2="5" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </button>
+          <div class="acc-body open" id="layer-1">
+            <div class="prose">
+              <p>
+                When a government wants to reduce pollution, it has two basic tools. It can
+                put a price on pollution — a carbon tax — so firms pay for every tonne they
+                emit and choose how much to cut. Or it can set a hard cap on total emissions
+                and let firms trade permits to stay under it. In theory, if everyone knows
+                exactly how expensive cutting emissions will be, both tools land in the same
+                place. But when that cost is uncertain — as it almost always is — the two
+                instruments produce different outcomes. Weitzman showed that the right choice
+                depends on a simple property of the underlying economics: whether the benefits
+                of cleaner air rise steeply or gently as pollution falls. This result still
+                drives every serious debate about carbon taxes versus cap-and-trade today.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Layer 2: Short Summary -->
+        <div class="acc-item">
+          <button class="acc-trigger" aria-expanded="false" aria-controls="layer-2">
+            <span class="acc-trigger-label">Short Summary</span>
+            <span class="acc-trigger-layer">Layer 2 of 3</span>
+            <span class="acc-icon" aria-hidden="true">
+              <svg viewBox="0 0 10 10">
+                <line x1="5" y1="1" x2="5" y2="9" stroke-linecap="round"/>
+                <line x1="1" y1="5" x2="9" y2="5" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </button>
+          <div class="acc-body" id="layer-2">
+            <div class="prose">
+              <p>
+                Weitzman considers a regulator who must choose between a price instrument
+                (Pigouvian tax) and a quantity instrument (tradeable permit cap) to control
+                an externality, facing uncertainty about the marginal abatement cost function.
+                Under certainty the two instruments are equivalent in welfare terms. Under
+                uncertainty they are not, because they respond differently to cost shocks:
+                a tax fixes the price and lets quantity adjust; a cap fixes the quantity and
+                lets price adjust.
+              </p>
+              <p>
+                The key result is that the regulator should prefer prices when the marginal
+                benefit curve is relatively flat compared to the marginal cost curve — that
+                is, when small changes in the quantity of pollution controlled do not much
+                alter the benefit of control. Quantities are preferred when the marginal
+                benefit curve is steep — when precise quantity control is critical because
+                benefits change sharply near a threshold. The magnitude of the welfare
+                difference is proportional to the ratio of the slopes of the two curves and
+                to the variance of the cost shock.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Layer 3: Marshall Notes -->
+        <div class="acc-item">
+          <button class="acc-trigger" aria-expanded="false" aria-controls="layer-3">
+            <span class="acc-trigger-label">Marshall Notes</span>
+            <span class="acc-trigger-layer">Layer 3 of 3</span>
+            <span class="acc-icon" aria-hidden="true">
+              <svg viewBox="0 0 10 10">
+                <line x1="5" y1="1" x2="5" y2="9" stroke-linecap="round"/>
+                <line x1="1" y1="5" x2="9" y2="5" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </button>
+          <div class="acc-body" id="layer-3">
+            <div class="mn-steps">
+
+              <div class="mn-step">
+                <div class="mn-step-head">
+                  <span class="mn-step-n">1</span>
+                  <span class="mn-step-label">Research Question</span>
+                </div>
+                <div class="mn-step-body">
+                  <p>When a social planner must regulate an externality under uncertainty
+                  about firms' marginal abatement costs, is a price instrument or a quantity
+                  instrument welfare-superior? And by exactly how much does the choice matter?</p>
+                </div>
+              </div>
+
+              <div class="mn-step">
+                <div class="mn-step-head">
+                  <span class="mn-step-n">2</span>
+                  <span class="mn-step-label">The Measurement Problem</span>
+                </div>
+                <div class="mn-step-body">
+                  <p>The regulator observes neither firms' true marginal abatement costs nor
+                  the realised quantity of emissions after the policy is set. She must commit
+                  to one instrument before the cost uncertainty resolves. The first-best
+                  solution — a state-contingent instrument that adjusts in real time as costs
+                  are revealed — is unavailable. So the question becomes: which second-best
+                  commitment does less damage in expectation?</p>
+                </div>
+              </div>
+
+              <div class="mn-step">
+                <div class="mn-step-head">
+                  <span class="mn-step-n">3</span>
+                  <span class="mn-step-label">The Workaround</span>
+                </div>
+                <div class="mn-step-body">
+                  <p>Weitzman takes a second-best approach. Let the marginal benefit of
+                  abatement be \(B(q)\) and the marginal cost be \(C(q, \theta)\), where
+                  \(\theta\) is a random cost shock with mean zero and variance \(\sigma^2\).
+                  Linearising around the optimum, let \(\beta = -B''\) be the slope of the
+                  marginal benefit curve and \(\alpha = C''\) the slope of the marginal cost
+                  curve. The expected welfare difference between a price instrument and a
+                  quantity instrument is:</p>
+                  <div class="katex-display">\Delta EW = \frac{\sigma^2}{2} \cdot \frac{\beta}{\alpha(\alpha + \beta)}</div>
+                  <p>When \(\Delta EW > 0\), prices deliver higher expected welfare. When
+                  \(\Delta EW < 0\), quantities do. The sign turns entirely on the ratio
+                  \(\beta / \alpha\): the slope of marginal benefits relative to marginal
+                  costs. If \(\beta < 0\) — steep marginal benefits — quantities win.
+                  If \(\beta \approx 0\) — flat marginal benefits — prices win.</p>
+                </div>
+              </div>
+
+              <div class="mn-step">
+                <div class="mn-step-head">
+                  <span class="mn-step-n">4</span>
+                  <span class="mn-step-label">The Defence</span>
+                </div>
+                <div class="mn-step-body">
+                  <p>The model requires the marginal benefit and cost functions to be locally
+                  linear — a standard second-order Taylor approximation that holds in a
+                  neighbourhood of the social optimum. The cost shock \(\theta\) is assumed
+                  additive and mean-zero, so the planner's prior is unbiased. These are
+                  strong but conventional assumptions in mechanism design; the qualitative
+                  result — prices win when benefits are flat, quantities win when benefits
+                  are steep — is robust to relaxing them in most extensions of the framework.</p>
+                </div>
+              </div>
+
+              <div class="mn-step">
+                <div class="mn-step-head">
+                  <span class="mn-step-n">5</span>
+                  <span class="mn-step-label">The Vulnerability</span>
+                </div>
+                <div class="mn-step-body">
+                  <p>The framework is static and partial equilibrium. In a dynamic setting
+                  where firms invest in abatement capital, the choice of instrument affects
+                  the entire trajectory of investment and costs — not just the current
+                  realisation. There is a well-developed literature showing that prices
+                  provide stronger dynamic incentives for innovation, which the original
+                  model does not capture.</p>
+                  <p>The paper also assumes the planner can commit credibly to either
+                  instrument before costs are revealed, which may not hold given regulatory
+                  capture, political economy constraints, or renegotiation. The linearity
+                  assumption breaks down near ecological thresholds or tipping points, which
+                  is precisely where the binary choice between instruments matters most for
+                  long-run climate outcomes. The irreversibility of climate change — closer
+                  to a strict quantity constraint — also sits outside the model's logic.</p>
+                </div>
+              </div>
+
+              <div class="mn-step">
+                <div class="mn-step-head">
+                  <span class="mn-step-n">6</span>
+                  <span class="mn-step-label">The Reach</span>
+                </div>
+                <div class="mn-step-body">
+                  <p>This is the starting point for virtually every policy debate about
+                  carbon taxes versus cap-and-trade. The paper has been extended to dynamic
+                  settings (Newell and Pizer 2003), correlated benefit and cost uncertainty
+                  (Stavins 1996), and hybrid instruments that impose both a price floor
+                  and a quantity ceiling (Roberts and Spence 1976, which appeared the same
+                  year). For greenhouse gases, where the marginal damage of an additional
+                  tonne of CO₂ is relatively flat in the short run — a flat \(B(q)\) curve
+                  — the paper's logic supports a carbon tax. The long-run threshold and
+                  tipping-point debate complicates this conclusion.</p>
+                </div>
+              </div>
+
+            </div><!-- end mn-steps -->
+          </div>
+        </div>
+
+      </div><!-- end accordion -->
+
+      <!-- Tags -->
+      <div class="tags-area">
+        <div class="tags-row">
+          <span class="tags-row-label">JEL</span>
+          <a href="jel-q5.html"  class="tag-jel">Q5</a>
+          <a href="jel-d8.html"  class="tag-jel">D8</a>
+          <a href="jel-h2.html"  class="tag-jel">H2</a>
+        </div>
+        <div class="tags-row">
+          <span class="tags-row-label">Topics</span>
+          <a href="topic-instrument-choice.html"  class="tag-topic">instrument choice</a>
+          <a href="topic-carbon-pricing.html"      class="tag-topic">carbon pricing</a>
+          <a href="topic-uncertainty.html"         class="tag-topic">uncertainty</a>
+          <a href="topic-externalities.html"       class="tag-topic">externalities</a>
+          <a href="topic-welfare-analysis.html"    class="tag-topic">welfare analysis</a>
+        </div>
+      </div>
+
+      <!-- References -->
+      <div class="article-refs">
+        <h3 class="article-refs-head">References</h3>
+        <ol>
+          <li>
+            Weitzman, M.L. (1974). Prices vs. Quantities.
+            <em>Quarterly Journal of Economics</em>, 88(4), 477–491.
+            <a href="https://doi.org/10.2307/1883176" target="_blank" rel="noopener">doi:10.2307/1883176</a>
+          </li>
+          <li>
+            Hotelling, H. (1931). The Economics of Exhaustible Resources.
+            <em>Journal of Political Economy</em>, 39(2), 137–175.
+          </li>
+          <li>
+            Pigou, A.C. (1920). <em>The Economics of Welfare</em>. Macmillan.
+          </li>
+          <li>
+            Roberts, M.J. &amp; Spence, M. (1976). Effluent Charges and Licences under
+            Uncertainty. <em>Journal of Public Economics</em>, 5(3–4), 193–208.
+          </li>
+          <li>
+            Newell, R.G. &amp; Pizer, W.A. (2003). Regulating Stock Externalities under
+            Uncertainty. <em>Journal of Environmental Economics and Management</em>,
+            45(2), 416–432.
+          </li>
+          <li>
+            Stavins, R.N. (1996). Correlated Uncertainty and Policy Instrument Choice.
+            <em>Journal of Environmental Economics and Management</em>, 30(2), 218–232.
+          </li>
+        </ol>
+      </div>
+
+      <!-- Related papers -->
+      <div class="article-related">
+        <h3 class="article-related-head">Related Papers</h3>
+        <div class="related-grid">
+          <a href="hotelling-1931.html" class="related-card">
+            <span class="related-card-badge" style="color:#7A1603">Solow Room</span>
+            <div class="related-card-title">The Economics of Exhaustible Resources</div>
+            <div class="related-card-meta">Hotelling · 1931 · J. Political Economy</div>
+          </a>
+          <a href="roberts-spence-1976.html" class="related-card">
+            <span class="related-card-badge" style="color:#042C4E">Pigou Lab</span>
+            <div class="related-card-title">Effluent Charges and Licences under Uncertainty</div>
+            <div class="related-card-meta">Roberts &amp; Spence · 1976 · J. Public Economics</div>
+          </a>
+          <a href="weitzman-2001-gamma.html" class="related-card">
+            <span class="related-card-badge" style="color:#7A1603">Solow Room</span>
+            <div class="related-card-title">Gamma Discounting</div>
+            <div class="related-card-meta">Weitzman · 2001 · American Economic Review</div>
+          </a>
+          <a href="long-equilibrium-transboundary.html" class="related-card">
+            <span class="related-card-badge" style="color:#1B4332">Long Equilibrium</span>
+            <div class="related-card-title">Stackelberg Differential Games in Transboundary Pollution</div>
+            <div class="related-card-meta">Ngo Van Long · Various · See entry</div>
+          </a>
+        </div>
+      </div>
+
+    </div><!-- end article-main -->
+
+    <!-- ── RIGHT: Sticky sidebar ─────────────────────────────── -->
+    <aside class="article-sidebar" aria-label="Paper information">
+
+      <!-- Entry author -->
+      <div class="sidebar-block">
+        <span class="sidebar-block-label">Entry Author</span>
+        <div class="sidebar-author-card">
+          <div class="sidebar-avatar">
+            <!-- Replace with: <img src="assets/images/authors/arti-agarwal.jpg" alt="Arti Agarwal"> -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <div>
+            <span class="sidebar-author-name">Arti Agarwal</span>
+            <span class="sidebar-author-affil">PhD Candidate<br>IIT Kanpur</span>
+          </div>
+        </div>
+        <p class="sidebar-author-bio">Researcher in environmental, agricultural, and resource economics. Works across dynamic game theory, optimal control, and empirical methods.</p>
+        <span class="sidebar-entry-date">Entry published September 2026</span>
+      </div>
+
+      <!-- Original paper -->
+      <div class="sidebar-block">
+        <span class="sidebar-block-label">Original Paper</span>
+        <div class="sidebar-paper-title">Prices vs. Quantities</div>
+        <div class="sidebar-paper-row"><strong>Author</strong> &nbsp;Martin L. Weitzman</div>
+        <div class="sidebar-paper-row"><strong>Journal</strong> &nbsp;Quarterly Journal of Economics</div>
+        <div class="sidebar-paper-row"><strong>Volume</strong> &nbsp;88(4) &nbsp;·&nbsp; <strong>Pages</strong> &nbsp;477–491</div>
+        <div class="sidebar-paper-row"><strong>Year</strong> &nbsp;1974</div>
+        <a href="https://doi.org/10.2307/1883176"
+           class="sidebar-doi-link"
+           target="_blank"
+           rel="noopener">
+          doi:10.2307/1883176 ↗
+        </a>
+      </div>
+
+      <!-- Citations -->
+      <div class="sidebar-block">
+        <span class="sidebar-block-label">Suggested Citations</span>
+
+        <div class="sidebar-cite-box">
+          <span class="sidebar-cite-label">Cite the Original Paper</span>
+          <div class="sidebar-cite-text" id="cite-paper">
+            Weitzman, M.L. (1974). Prices vs. Quantities.
+            <em>Quarterly Journal of Economics</em>, 88(4), 477–491.
+            doi:10.2307/1883176
+          </div>
+          <button class="sidebar-cite-copy copy-btn"
+                  data-copy-target="#cite-paper">
+            Copy citation
+          </button>
+        </div>
+
+        <div class="sidebar-cite-box">
+          <span class="sidebar-cite-label">Cite this Archive Entry</span>
+          <div class="sidebar-cite-text" id="cite-entry">
+            Agarwal, A. (2026). Prices vs. Quantities — Marshall Notes Entry.
+            <em>The Weitzman Archive</em>.
+            weitzmanarchive.com/weitzman-1974-prices-quantities
+          </div>
+          <button class="sidebar-cite-copy copy-btn"
+                  data-copy-target="#cite-entry">
+            Copy citation
+          </button>
+        </div>
+      </div>
+
+    </aside>
+
+  </div><!-- end article-layout -->
+
+</main>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-wordmark">The Weitzman Archive</span>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="marshall-notes.html">Marshall Notes</a>
+      <a href="ciriacy-wantrup.html">Timeline</a>
+    </div>
+    <span class="footer-copy">&copy; 2026 The Weitzman Archive</span>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // KaTeX auto-render runs after main.js DOMContentLoaded
+  // Catches any inline \( \) or display $$ $$ that main.js missed
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof renderMathInElement !== 'undefined') {
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: '$$',   right: '$$',   display: true  },
+          { left: '\\[',  right: '\\]',  display: true  },
+          { left: '$',    right: '$',    display: false },
+          { left: '\\(',  right: '\\)',  display: false }
+        ],
+        throwOnError: false
+      });
+    }
+  });
+</script>
+</body>
+</html>
