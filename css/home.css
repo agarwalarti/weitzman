@@ -270,13 +270,14 @@
 }
 
 .recent-feature-img {
-  background: var(--bg-tint);
+  aspect-ratio: 16 / 9;
+  min-height: unset;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
-  min-height: 220px;
+  background: var(--bg-tint);
 }
 
 .recent-feature-img svg {
@@ -389,7 +390,8 @@
 
 .art-card-img {
   width: 100%;
-  height: 110px;
+  aspect-ratio: 16 / 9;
+  height: auto;
   background: color-mix(in srgb, var(--card-color) 6%, var(--bg));
   display: flex;
   align-items: center;
@@ -397,6 +399,7 @@
   margin-bottom: 1rem;
   position: relative;
   overflow: hidden;
+  transition: background 0.18s;
 }
 
 .art-card-img svg {
@@ -445,25 +448,15 @@
   color: var(--ink-mid);
 }
 
-/* ── PAPER IMAGE — real image vs placeholder ───────────────── */
-/* When a real image is present, .art-card-img holds an <img> tag */
+/* ── PAPER IMAGE ───────────────────────────────────────────── */
 .art-card-img img,
-.recent-feature-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: opacity 0.18s;
-}
-
-.art-card:hover .art-card-img img {
-  opacity: 0.9;
-}
-
-/* Recent feature image — real image handling */
 .recent-feature-img img {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 /* ── GAZETTE STRIP ─────────────────────────────────────────── */
