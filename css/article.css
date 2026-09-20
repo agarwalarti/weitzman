@@ -1,0 +1,785 @@
+/* ============================================================
+   THE WEITZMAN ARCHIVE — article.css
+   Individual paper / article page styles
+   Each article page sets --accent to its section colour:
+     body { --accent: var(--solow); }
+   Depends on: main.css loaded first
+   KaTeX stylesheet loaded separately in <head>
+   ============================================================ */
+
+/* ── ARTICLE MASTHEAD ──────────────────────────────────────── */
+.article-masthead {
+  padding: 3rem 0 0;
+}
+
+.article-kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.1rem;
+  flex-wrap: wrap;
+}
+
+.article-section-badge {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--bg);
+  background: var(--accent);
+  padding: 3px 9px;
+  letter-spacing: 0.07em;
+  display: inline-block;
+}
+
+.article-kicker-journal {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.article-title {
+  font-family: 'Spectral', serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin-bottom: 0.65rem;
+  max-width: 820px;
+}
+
+.article-subtitle {
+  font-family: 'Castoro', serif;
+  font-style: italic;
+  font-size: 1.08rem;
+  line-height: 1.6;
+  color: var(--ink-mid);
+  margin-bottom: 1.6rem;
+  max-width: 640px;
+}
+
+/* Meta bar: paper author · journal · year · entry author · date */
+.article-meta-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 2.5rem;
+  border-top: 1px solid var(--rule);
+  border-bottom: 2px solid var(--accent);
+  padding: 0.9rem 0;
+  margin-bottom: 0;
+}
+
+.meta-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.meta-cell-label {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  display: block;
+}
+
+.meta-cell-val {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--ink-mid);
+  display: block;
+  line-height: 1.3;
+}
+
+.meta-cell-val.muted {
+  font-weight: 300;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+/* ── HERO IMAGE ────────────────────────────────────────────── */
+.article-hero {
+  width: 100%;
+  height: 300px;
+  background: var(--bg-tint);
+  margin: 2.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.article-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.article-hero svg {
+  opacity: 0.1;
+}
+
+.article-hero-label {
+  position: absolute;
+  bottom: 0.9rem;
+  right: 1.2rem;
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  opacity: 0.4;
+}
+
+/* ── TWO-COLUMN LAYOUT ─────────────────────────────────────── */
+.article-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 3.5rem;
+  align-items: start;
+  margin-bottom: 5rem;
+}
+
+.article-main {
+  min-width: 0;
+}
+
+/* ── STICKY SIDEBAR ────────────────────────────────────────── */
+.article-sidebar {
+  position: sticky;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Shared sidebar block */
+.sidebar-block {
+  border: 1px solid var(--rule);
+  padding: 1.3rem;
+  margin-bottom: -1px; /* collapse borders */
+}
+
+.sidebar-block:first-child {
+  border-top: 3px solid var(--accent);
+}
+
+.sidebar-block-label {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Author card */
+.sidebar-author-card {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  margin-bottom: 0.9rem;
+}
+
+.sidebar-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg-tint);
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.sidebar-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.sidebar-avatar svg {
+  opacity: 0.22;
+  width: 22px;
+}
+
+.sidebar-author-name {
+  font-family: 'Spectral', serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.sidebar-author-affil {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 300;
+  color: var(--muted);
+  display: block;
+  line-height: 1.4;
+}
+
+.sidebar-author-bio {
+  font-family: 'Castoro', serif;
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: var(--ink-mid);
+  font-style: italic;
+  border-top: 1px solid var(--rule);
+  padding-top: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.sidebar-entry-date {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 300;
+  color: var(--muted);
+  display: block;
+}
+
+/* Original paper block */
+.sidebar-paper-title {
+  font-family: 'Spectral', serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  color: var(--ink);
+  margin-bottom: 0.85rem;
+}
+
+.sidebar-paper-row {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 300;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+  line-height: 1.5;
+}
+
+.sidebar-paper-row strong {
+  font-weight: 500;
+  color: var(--ink-mid);
+}
+
+.sidebar-doi-link {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 300;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  display: block;
+  margin-top: 0.7rem;
+  word-break: break-all;
+  transition: opacity 0.15s;
+}
+
+.sidebar-doi-link:hover {
+  opacity: 0.75;
+}
+
+/* Citation boxes */
+.sidebar-cite-box {
+  border-top: 1px solid var(--rule);
+  padding-top: 1rem;
+  margin-top: 0;
+}
+
+.sidebar-cite-box + .sidebar-cite-box {
+  margin-top: 0.9rem;
+}
+
+.sidebar-cite-label {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.07em;
+  display: block;
+  margin-bottom: 0.45rem;
+}
+
+.sidebar-cite-text {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.74rem;
+  line-height: 1.65;
+  color: var(--ink-mid);
+  font-weight: 300;
+  margin-bottom: 0.6rem;
+}
+
+.sidebar-cite-text em {
+  font-family: 'Castoro', serif;
+  font-style: italic;
+}
+
+.sidebar-cite-copy {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.62rem;
+  padding: 3px 0;
+  border: none;
+  border-bottom: 1px solid var(--rule);
+  background: none;
+  color: var(--muted);
+  width: 100%;
+  text-align: left;
+  transition: color 0.15s, border-color 0.15s;
+  letter-spacing: 0.02em;
+}
+
+.sidebar-cite-copy:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ── ACCORDION ─────────────────────────────────────────────── */
+.accordion {
+  margin-bottom: 2.5rem;
+}
+
+.acc-item {
+  border-top: 1px solid var(--rule);
+}
+
+.acc-item:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.acc-trigger {
+  width: 100%;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 0;
+  gap: 1rem;
+  text-align: left;
+}
+
+.acc-trigger-label {
+  font-family: 'Spectral', serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+  transition: color 0.15s;
+}
+
+.acc-trigger[aria-expanded="true"] .acc-trigger-label {
+  color: var(--accent);
+}
+
+.acc-trigger-layer {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 300;
+  color: var(--muted);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.acc-icon {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.acc-trigger[aria-expanded="true"] .acc-icon {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.acc-icon svg {
+  width: 10px;
+  height: 10px;
+  stroke: var(--muted);
+  fill: none;
+  stroke-width: 2;
+  transition: stroke 0.15s, transform 0.2s;
+}
+
+.acc-trigger[aria-expanded="true"] .acc-icon svg {
+  stroke: var(--bg);
+  transform: rotate(45deg);
+}
+
+.acc-body {
+  display: none;
+  padding-bottom: 1.8rem;
+}
+
+.acc-body.open {
+  display: block;
+}
+
+/* ── PROSE (body text in accordion layers) ─────────────────── */
+.prose p {
+  font-family: 'Castoro', serif;
+  font-size: 1rem;
+  line-height: 1.88;
+  color: var(--ink-mid);
+  margin-bottom: 1.1rem;
+  max-width: var(--prose-w);
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.prose p strong {
+  font-family: 'Spectral', serif;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.prose p em {
+  font-style: italic;
+}
+
+.prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ── MARSHALL NOTES STEPS ──────────────────────────────────── */
+.mn-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.mn-step {}
+
+.mn-step-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  margin-bottom: 0.55rem;
+}
+
+/* Ghost step number */
+.mn-step-n {
+  font-family: 'Spectral', serif;
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--accent);
+  opacity: 0.15;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.mn-step-label {
+  font-family: 'Spectral', serif;
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+
+.mn-step-body {
+  font-family: 'Castoro', serif;
+  font-size: 0.97rem;
+  line-height: 1.88;
+  color: var(--ink-mid);
+  padding-left: 2.8rem;
+  max-width: var(--prose-w);
+}
+
+.mn-step-body p {
+  margin-bottom: 0.7rem;
+}
+
+.mn-step-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── KATEX / LATEX ─────────────────────────────────────────── */
+/* Inline math */
+.katex {
+  font-size: 1em;
+}
+
+/* Display math block */
+.katex-display {
+  margin: 1.2rem 0;
+  padding: 1rem 1.4rem;
+  background: var(--bg-tint);
+  border-left: 3px solid var(--accent);
+  overflow-x: auto;
+}
+
+.katex-display > .katex {
+  font-size: 1.05em;
+}
+
+/* Explicit display block class (for the build script) */
+.math-block {
+  margin: 1.2rem 0;
+  padding: 1rem 1.4rem;
+  background: var(--bg-tint);
+  border-left: 3px solid var(--accent);
+  overflow-x: auto;
+  font-size: 1.05em;
+}
+
+/* ── TAGS AREA ─────────────────────────────────────────────── */
+.tags-area {
+  margin: 1.8rem 0;
+}
+
+.tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.tags-row-label {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  min-width: 42px;
+  margin-right: 0.2rem;
+}
+
+.tag-jel {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--rule));
+  padding: 2px 7px;
+  letter-spacing: 0.04em;
+  display: inline-block;
+  transition: background 0.15s, color 0.15s;
+}
+
+.tag-jel:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.tag-topic {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+  padding: 2px 8px;
+  letter-spacing: 0.02em;
+  display: inline-block;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.tag-topic:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── DATASET / REPO LINKS ──────────────────────────────────── */
+.resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.2rem 0 1.8rem;
+}
+
+.resource-link {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 4px 12px;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: background 0.15s, color 0.15s;
+}
+
+.resource-link:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.resource-link-icon {
+  width: 10px;
+  height: 10px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+
+/* ── REFERENCES ────────────────────────────────────────────── */
+.article-refs {
+  max-width: var(--prose-w);
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.article-refs-head {
+  font-family: 'Spectral', serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--ink);
+  margin-bottom: 1rem;
+  letter-spacing: -0.005em;
+}
+
+.article-refs ol {
+  padding-left: 1.3rem;
+  list-style: decimal;
+}
+
+.article-refs li {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.72;
+  color: var(--muted);
+  font-weight: 300;
+  margin-bottom: 0.6rem;
+}
+
+.article-refs li em {
+  font-family: 'Castoro', serif;
+  font-style: italic;
+}
+
+.article-refs li a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity 0.15s;
+}
+
+.article-refs li a:hover {
+  opacity: 0.75;
+}
+
+/* ── RELATED PAPERS ────────────────────────────────────────── */
+.article-related {
+  margin-top: 3.5rem;
+  padding-top: 1.8rem;
+  border-top: 3px solid var(--accent);
+}
+
+.article-related-head {
+  font-family: 'Spectral', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--ink);
+  margin-bottom: 1.3rem;
+  letter-spacing: -0.01em;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+
+.related-card {
+  background: var(--bg);
+  padding: 1.1rem 1.2rem;
+  display: block;
+  transition: background 0.15s;
+}
+
+.related-card:hover {
+  background: var(--bg-tint);
+}
+
+.related-card-badge {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.related-card-title {
+  font-family: 'Spectral', serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  color: var(--ink);
+  margin-bottom: 0.3rem;
+  transition: color 0.15s;
+}
+
+.related-card:hover .related-card-title {
+  color: var(--accent);
+}
+
+.related-card-meta {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 300;
+  color: var(--muted);
+}
+
+/* ── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .article-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .article-sidebar {
+    position: static;
+    /* On mobile sidebar moves below the main content */
+    order: 2;
+    margin-top: 2rem;
+  }
+
+  .article-main {
+    order: 1;
+  }
+
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .article-meta-bar {
+    gap: 0.8rem 1.5rem;
+  }
+
+  .mn-step-body {
+    padding-left: 0;
+  }
+
+  .mn-step-n {
+    display: none;
+  }
+}
