@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>The Weitzman Archive — Environmental, Resource &amp; Agricultural Economics</title>
+  <meta name="description" content="A curated field companion for environmental, resource, and agricultural economics. Landmark papers explained plainly, methods unpacked rigorously, and the discipline's intellectual history made navigable.">
+  <link rel="canonical" href="https://weitzmanarchive.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="The Weitzman Archive">
+  <meta property="og:description" content="A curated field companion for environmental, resource, and agricultural economics.">
+  <meta property="og:url"         content="https://weitzmanarchive.com/">
+  <meta property="og:image"       content="https://weitzmanarchive.com/assets/images/og-default.jpg">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📜</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Castoro:ital@0;1&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<!-- ── NAVIGATION ──────────────────────────────────────────── -->
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="site-wordmark">The Weitzman Archive</a>
+
+    <div class="nav-right">
+
+      <!-- Sections dropdown -->
+      <div class="nav-item">
+        <button class="nav-btn" aria-expanded="false" aria-haspopup="true">
+          Sections
+          <svg class="chevron" viewBox="0 0 10 6" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="nav-dropdown" role="menu">
+          <div class="nav-dropdown-section">
+            <span class="nav-dropdown-label">Named Sections</span>
+            <a href="solow-room.html" role="menuitem">
+              <span class="nav-dot" style="background:#7A1603"></span>
+              The Solow Room — Theory
+            </a>
+            <a href="pigou-lab.html" role="menuitem">
+              <span class="nav-dot" style="background:#042C4E"></span>
+              The Pigou Lab — Empirics
+            </a>
+            <a href="krutilla-gallery.html" role="menuitem">
+              <span class="nav-dot" style="background:#BF9000"></span>
+              The Krutilla Gallery — Transdisciplinary
+            </a>
+            <a href="long-equilibrium.html" role="menuitem">
+              <span class="nav-dot" style="background:#1B4332"></span>
+              The Long Equilibrium — Game Theory
+            </a>
+            <a href="nordhaus-index.html" role="menuitem">
+              <span class="nav-dot" style="background:#2E3F50"></span>
+              The Nordhaus Index — Data &amp; Repos
+            </a>
+          </div>
+          <div class="nav-dropdown-section">
+            <a href="gazette.html" role="menuitem">
+              <span class="nav-dot" style="background:#5B2D8E"></span>
+              The Gazette — Essays &amp; Analysis
+            </a>
+            <a href="ciriacy-wantrup.html" role="menuitem">
+              <span class="nav-dot" style="background:#888"></span>
+              Ciriacy-Wantrup — Field Timeline
+            </a>
+            <a href="marshall-notes.html" role="menuitem">
+              <span class="nav-dot" style="background:#888"></span>
+              Marshall Notes
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- JEL Codes dropdown -->
+      <div class="nav-item">
+        <button class="nav-btn" aria-expanded="false" aria-haspopup="true">
+          JEL Codes
+          <svg class="chevron" viewBox="0 0 10 6" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="nav-dropdown" role="menu">
+          <div class="nav-dropdown-section">
+            <span class="nav-dropdown-label">Environmental &amp; Resource</span>
+            <a href="jel-q0.html" role="menuitem"><span class="nav-dot" style="background:#7A1603"></span>Q0 — General</a>
+            <a href="jel-q1.html" role="menuitem"><span class="nav-dot" style="background:#7A1603"></span>Q1 — Agriculture</a>
+            <a href="jel-q2.html" role="menuitem"><span class="nav-dot" style="background:#7A1603"></span>Q2 — Renewable Resources</a>
+            <a href="jel-q3.html" role="menuitem"><span class="nav-dot" style="background:#7A1603"></span>Q3 — Nonrenewable Resources</a>
+            <a href="jel-q4.html" role="menuitem"><span class="nav-dot" style="background:#7A1603"></span>Q4 — Energy</a>
+            <a href="jel-q5.html" role="menuitem"><span class="nav-dot" style="background:#7A1603"></span>Q5 — Environmental Economics</a>
+          </div>
+          <div class="nav-dropdown-section">
+            <span class="nav-dropdown-label">Related</span>
+            <a href="jel-c6.html" role="menuitem"><span class="nav-dot" style="background:#888"></span>C6 — Mathematical Methods</a>
+            <a href="jel-d8.html" role="menuitem"><span class="nav-dot" style="background:#888"></span>D8 — Information &amp; Uncertainty</a>
+            <a href="jel-h2.html" role="menuitem"><span class="nav-dot" style="background:#888"></span>H2 — Taxation &amp; Subsidies</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-sep" aria-hidden="true"></div>
+      <a href="papers.html"  class="nav-link">Search</a>
+      <a href="about.html"   class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ──────────────────────────────────────────────────── -->
+<section class="hero" aria-label="Site introduction">
+  <div class="hero-inner">
+
+    <div class="hero-left">
+      <p class="hero-eyebrow">Environmental · Resource · Agricultural Economics</p>
+      <h1 class="hero-title">The Weitzman<br><em>Archive</em></h1>
+      <p class="hero-desc">
+        A curated field companion honouring the rigour and clarity that Martin Weitzman
+        brought to economics. Landmark papers explained plainly, methods unpacked honestly,
+        and the discipline's intellectual history made navigable — for researchers,
+        policymakers, and students.
+      </p>
+      <a href="papers.html" class="hero-cta">Browse all papers</a>
+    </div>
+
+    <div class="hero-latest" aria-label="Latest entry">
+      <span class="hero-latest-lbl">Latest Entry</span>
+      <span class="hero-latest-badge" style="background:#7A1603">Solow Room</span>
+      <a href="weitzman-1974-prices-quantities.html" class="hero-latest-title">
+        Prices vs. Quantities
+      </a>
+      <p class="hero-latest-blurb">
+        When regulators face uncertainty about abatement costs, should they set a price
+        or a quantity limit? Weitzman's 1974 answer still frames every carbon pricing
+        debate today.
+      </p>
+      <div class="hero-latest-meta">
+        <span class="meta-author">Martin L. Weitzman</span>
+        <span>QJE · 1974</span>
+        <span>Q5 · D8</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── MAIN CONTENT ───────────────────────────────────────────── -->
+<main class="page" id="main-content">
+
+  <!-- Named Sections grid -->
+  <section class="home-categories" aria-labelledby="sections-heading">
+    <div class="section-head">
+      <h2 class="section-head-title" id="sections-heading">Named Sections</h2>
+      <a href="papers.html" class="section-head-link">View all papers</a>
+    </div>
+
+    <!-- Top row: Theory / Empirics / Transdisciplinary -->
+    <div class="cat-grid">
+
+      <a href="solow-room.html" class="cat-card" style="--cat-color:#7A1603">
+        <div class="cat-color-bar"></div>
+        <span class="cat-name">The Solow Room</span>
+        <span class="cat-domain">Theory &amp; Dynamic Optimisation</span>
+        <p class="cat-desc">Pure theory, dynamic optimisation models, capital theory, shadow pricing, and the mathematics of resource scarcity across time.</p>
+        <div class="cat-count"><strong>24</strong> papers</div>
+      </a>
+
+      <a href="pigou-lab.html" class="cat-card" style="--cat-color:#042C4E">
+        <div class="cat-color-bar"></div>
+        <span class="cat-name">The Pigou Lab</span>
+        <span class="cat-domain">Empirical Work &amp; Identification</span>
+        <p class="cat-desc">Empirical papers, causal inference, natural experiments, and reduced-form estimation testing the externality mechanisms Pigou first named.</p>
+        <div class="cat-count"><strong>31</strong> papers</div>
+      </a>
+
+      <a href="krutilla-gallery.html" class="cat-card" style="--cat-color:#BF9000">
+        <div class="cat-color-bar"></div>
+        <span class="cat-name">The Krutilla Gallery</span>
+        <span class="cat-domain">Transdisciplinary Work</span>
+        <p class="cat-desc">Papers bridging economics with ecology, ethics, geography, and political science — in the tradition of Krutilla's 1967 <em>Conservation Reconsidered</em>.</p>
+        <div class="cat-count"><strong>18</strong> papers</div>
+      </a>
+
+    </div>
+
+    <!-- Bottom row: Game Theory / Data / Gazette -->
+    <div class="cat-grid">
+
+      <a href="long-equilibrium.html" class="cat-card" style="--cat-color:#1B4332">
+        <div class="cat-color-bar"></div>
+        <span class="cat-name">The Long Equilibrium</span>
+        <span class="cat-domain">Game Theory &amp; Strategic Interaction</span>
+        <p class="cat-desc">Differential games, strategic resource use, transboundary pollution models, and mechanism design — named for Ngo Van Long.</p>
+        <div class="cat-count"><strong>16</strong> papers</div>
+      </a>
+
+      <a href="nordhaus-index.html" class="cat-card" style="--cat-color:#2E3F50">
+        <div class="cat-color-bar"></div>
+        <span class="cat-name">The Nordhaus Index</span>
+        <span class="cat-domain">Datasets &amp; Replication Packages</span>
+        <p class="cat-desc">Open datasets, code repositories, spatial boundary files, and replication packages from papers across the archive.</p>
+        <div class="cat-count"><strong>42</strong> datasets</div>
+      </a>
+
+      <a href="gazette.html" class="cat-card" style="--cat-color:#5B2D8E">
+        <div class="cat-color-bar"></div>
+        <span class="cat-name">The Gazette</span>
+        <span class="cat-domain">Essays &amp; Field Analysis</span>
+        <p class="cat-desc">Original essays, data explorations, and field surveys — deeper analysis written from inside the discipline, without the constraints of a journal format.</p>
+        <div class="cat-count"><strong>7</strong> essays</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Recent Entries -->
+  <section class="home-recent" aria-labelledby="recent-heading">
+    <div class="section-head">
+      <h2 class="section-head-title" id="recent-heading">Recent Entries</h2>
+      <a href="papers.html" class="section-head-link">All papers</a>
+    </div>
+
+    <!-- Large featured entry -->
+    <article class="recent-feature" style="--entry-color:#7A1603">
+      <div class="recent-feature-img img-placeholder">
+        <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.7" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+        <span class="img-section-label" style="color:#7A1603">SOLOW ROOM</span>
+      </div>
+      <div class="recent-feature-body">
+        <div>
+          <span class="recent-feature-badge">Solow Room</span>
+          <a href="weitzman-1974-prices-quantities.html" class="recent-feature-title">
+            Prices vs. Quantities
+          </a>
+          <p class="recent-feature-blurb">
+            When regulators face uncertainty about abatement costs, the welfare consequences
+            of choosing the wrong instrument depend on a single ratio — the slopes of the
+            marginal benefit and cost curves. Weitzman's 1974 result is the foundation every
+            carbon pricing debate returns to.
+          </p>
+        </div>
+        <div class="recent-feature-meta">
+          <span class="meta-author">Martin L. Weitzman</span>
+          <span>Quarterly Journal of Economics</span>
+          <span>1974</span>
+          <span class="jel-tag" style="color:#7A1603">Q5</span>
+          <span class="jel-tag" style="color:#7A1603">D8</span>
+          <span class="jel-tag" style="color:#7A1603">H2</span>
+          <span style="margin-left:auto;font-size:0.68rem">Entry by Arti Agarwal</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Article card row 1 -->
+    <div class="article-grid">
+
+      <a href="hotelling-1931.html" class="art-card" style="--card-color:#7A1603">
+        <span class="art-card-badge">Solow Room</span>
+        <div class="art-card-img img-placeholder">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+          <span class="img-section-label" style="color:#7A1603">SOLOW ROOM</span>
+        </div>
+        <span class="art-card-title">The Economics of Exhaustible Resources</span>
+        <p class="art-card-blurb">Hotelling's rule — the price of a non-renewable resource must rise at the rate of interest — is the result every extraction model either builds on or argues with.</p>
+        <div class="art-card-meta">
+          <span class="meta-author">Harold Hotelling</span>
+          <span>JPE · 1931</span>
+          <span class="jel-tag" style="color:#7A1603">Q3</span>
+        </div>
+      </a>
+
+      <a href="long-dockner-2000.html" class="art-card" style="--card-color:#1B4332">
+        <span class="art-card-badge">Long Equilibrium</span>
+        <div class="art-card-img img-placeholder">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+          <span class="img-section-label" style="color:#1B4332">LONG EQUILIBRIUM</span>
+        </div>
+        <span class="art-card-title">Differential Games in Economics and Management Science</span>
+        <p class="art-card-blurb">The foundational treatment of differential game methods in economics — from resource extraction under strategic competition to transboundary pollution agreements.</p>
+        <div class="art-card-meta">
+          <span class="meta-author">Dockner, Long et al.</span>
+          <span>CUP · 2000</span>
+          <span class="jel-tag" style="color:#1B4332">C7</span>
+        </div>
+      </a>
+
+      <a href="krutilla-1967.html" class="art-card" style="--card-color:#BF9000">
+        <span class="art-card-badge">Krutilla Gallery</span>
+        <div class="art-card-img img-placeholder">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+          <span class="img-section-label" style="color:#BF9000">KRUTILLA GALLERY</span>
+        </div>
+        <span class="art-card-title">Conservation Reconsidered</span>
+        <p class="art-card-blurb">The paper that founded environmental economics as a field, establishing existence value and the asymmetry between the reproducible and the irreplaceable.</p>
+        <div class="art-card-meta">
+          <span class="meta-author">John V. Krutilla</span>
+          <span>AER · 1967</span>
+          <span class="jel-tag" style="color:#BF9000">Q5</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Article card row 2 -->
+    <div class="article-grid" style="border-top:none;margin-top:1px">
+
+      <a href="weitzman-2001-gamma.html" class="art-card" style="--card-color:#7A1603">
+        <span class="art-card-badge">Solow Room</span>
+        <div class="art-card-img img-placeholder">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+          <span class="img-section-label" style="color:#7A1603">SOLOW ROOM</span>
+        </div>
+        <span class="art-card-title">Gamma Discounting</span>
+        <p class="art-card-blurb">Uncertainty about the discount rate implies the effective social rate should decline over time — with large consequences for long-run environmental investments.</p>
+        <div class="art-card-meta">
+          <span class="meta-author">Martin L. Weitzman</span>
+          <span>AER · 2001</span>
+          <span class="jel-tag" style="color:#7A1603">Q5</span>
+          <span class="jel-tag" style="color:#7A1603">D9</span>
+        </div>
+      </a>
+
+      <a href="agarwal-2025-stubble.html" class="art-card" style="--card-color:#042C4E">
+        <span class="art-card-badge">Pigou Lab</span>
+        <div class="art-card-img img-placeholder">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+          <span class="img-section-label" style="color:#042C4E">PIGOU LAB</span>
+        </div>
+        <span class="art-card-title">The Economic Costs of Air Pollution from Stubble Burning</span>
+        <p class="art-card-blurb">IV estimation of the economic cost of agricultural stubble burning in North India, using wind direction as an instrument for cross-state pollution exposure.</p>
+        <div class="art-card-meta">
+          <span class="meta-author">Agarwal &amp; Kumar</span>
+          <span>Working Paper · 2025</span>
+          <span class="jel-tag" style="color:#042C4E">Q5</span>
+          <span class="jel-tag" style="color:#042C4E">Q1</span>
+        </div>
+      </a>
+
+      <a href="gazette-instrument-debate.html" class="art-card" style="--card-color:#5B2D8E">
+        <span class="art-card-badge">The Gazette</span>
+        <div class="art-card-img img-placeholder">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+          <span class="img-section-label" style="color:#5B2D8E">THE GAZETTE</span>
+        </div>
+        <span class="art-card-title">Why the Instrument Debate Refuses to Die</span>
+        <p class="art-card-blurb">Fifty years after Weitzman, the carbon tax versus cap-and-trade argument is still live. What the theoretical literature actually says — and why practitioners keep ignoring it.</p>
+        <div class="art-card-meta">
+          <span class="meta-author">Arti Agarwal</span>
+          <span>September 2026</span>
+          <span class="gazette-topic-tag">Essay</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Gazette strip -->
+  <section class="home-gazette" aria-labelledby="gazette-heading">
+    <div class="gazette-inner">
+
+      <div class="gazette-identity">
+        <h2 class="gazette-title" id="gazette-heading">The Gazette</h2>
+        <p class="gazette-tagline">Original essays, data explorations, and field surveys — deeper analysis written from inside the discipline, without the constraints of a journal format.</p>
+        <a href="gazette.html" class="gazette-all-link">All essays</a>
+      </div>
+
+      <div class="gazette-list">
+
+        <div class="gazette-row">
+          <div class="gazette-thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+          </div>
+          <div>
+            <a href="gazette-instrument-debate.html" class="gazette-row-title">
+              Why the Instrument Debate Refuses to Die
+            </a>
+            <p class="gazette-row-blurb">Fifty years after Weitzman, the carbon tax versus cap-and-trade argument remains live. What the theoretical literature actually says — and why practitioners keep ignoring it.</p>
+            <div class="gazette-row-meta">
+              <span class="meta-author">Arti Agarwal</span>
+              <span>September 2026</span>
+              <span class="gazette-topic-tag">Essay</span>
+              <span class="gazette-topic-tag">Carbon pricing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gazette-row">
+          <div class="gazette-thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+          </div>
+          <div>
+            <a href="gazette-theory-decline.html" class="gazette-row-title">
+              The Disappearance of Theory from Environmental Economics
+            </a>
+            <p class="gazette-row-blurb">A survey of top field journals over two decades shows a dramatic shift away from structural and theoretical work. What we are losing — and what it costs the field.</p>
+            <div class="gazette-row-meta">
+              <span class="meta-author">Arti Agarwal</span>
+              <span>August 2026</span>
+              <span class="gazette-topic-tag">Essay</span>
+              <span class="gazette-topic-tag">Field survey</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gazette-row">
+          <div class="gazette-thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+          </div>
+          <div>
+            <a href="gazette-data-infrastructure.html" class="gazette-row-title">
+              Mapping the Data Infrastructure of Agricultural Economics
+            </a>
+            <p class="gazette-row-blurb">Which datasets actually drive the empirical literature in agricultural economics? A look at what gets used, what gets ignored, and where the gaps are for South Asia.</p>
+            <div class="gazette-row-meta">
+              <span class="meta-author">Arti Agarwal</span>
+              <span>July 2026</span>
+              <span class="gazette-topic-tag">Data analysis</span>
+              <span class="gazette-topic-tag">Agriculture</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-wordmark">The Weitzman Archive</span>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="marshall-notes.html">Marshall Notes</a>
+      <a href="ciriacy-wantrup.html">Timeline</a>
+    </div>
+    <span class="footer-copy">&copy; 2026 The Weitzman Archive</span>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+{
+  "_comment": "The Weitzman Archive — papers metadata database. Auto-updated by build.py when new .md files are added. Never edit Marshall Notes or long-form content here — that lives in the markdown files.",
+  "_schema": {
+    "slug":       "string — matches the .html filename without extension",
+    "title":      "string",
+    "authors":    "array of { name, url } — url is ORCID, homepage, or Google Scholar",
+    "year":       "integer",
+    "journal":    "string — full journal name",
+    "doi":        "string — without the https://doi.org/ prefix",
+    "section":    "string — solow-room | pigou-lab | krutilla-gallery | long-equilibrium | nordhaus-index | gazette",
+    "jel":        "array of strings — e.g. ['Q5', 'D8']",
+    "topics":     "array of strings — lowercase hyphenated e.g. 'carbon-pricing'",
+    "datasets":   "array of { name, url }",
+    "repos":      "array of { name, url }",
+    "related":    "array of slugs",
+    "entry_author":  "string — name of the person who wrote this archive entry",
+    "entry_affil":   "string — their affiliation",
+    "entry_date":    "string — YYYY-MM format",
+    "image":         "string — filename in assets/images/, empty string = use section default"
+  },
+  "papers": [
+    {
+      "slug":    "weitzman-1974-prices-quantities",
+      "title":   "Prices vs. Quantities",
+      "authors": [
+        { "name": "Martin L. Weitzman", "url": "https://scholar.harvard.edu/weitzman" }
+      ],
+      "year":    1974,
+      "journal": "Quarterly Journal of Economics",
+      "doi":     "10.2307/1883176",
+      "section": "solow-room",
+      "jel":     ["Q5", "D8", "H2"],
+      "topics":  ["instrument-choice", "carbon-pricing", "uncertainty", "externalities"],
+      "datasets": [],
+      "repos":    [],
+      "related":  ["hotelling-1931", "dasgupta-heal-1974", "weitzman-2001-gamma"],
+      "entry_author": "Arti Agarwal",
+      "entry_affil":  "IIT Kanpur",
+      "entry_date":   "2026-09",
+      "image":        ""
+    },
+    {
+      "slug":    "hotelling-1931",
+      "title":   "The Economics of Exhaustible Resources",
+      "authors": [
+        { "name": "Harold Hotelling", "url": "" }
+      ],
+      "year":    1931,
+      "journal": "Journal of Political Economy",
+      "doi":     "10.1086/254195",
+      "section": "solow-room",
+      "jel":     ["Q3", "Q5"],
+      "topics":  ["exhaustible-resources", "hotelling-rule", "dynamic-models"],
+      "datasets": [],
+      "repos":    [],
+      "related":  ["solow-1974", "dasgupta-heal-1974", "hartwick-1977"],
+      "entry_author": "Arti Agarwal",
+      "entry_affil":  "IIT Kanpur",
+      "entry_date":   "2026-09",
+      "image":        ""
+    },
+    {
+      "slug":    "solow-1974",
+      "title":   "Intergenerational Equity and Exhaustible Resources",
+      "authors": [
+        { "name": "Robert M. Solow", "url": "https://economics.mit.edu/people/faculty/robert-solow" }
+      ],
+      "year":    1974,
+      "journal": "Review of Economic Studies",
+      "doi":     "10.2307/2296370",
+      "section": "solow-room",
+      "jel":     ["Q0", "D9"],
+      "topics":  ["sustainability", "intergenerational-equity", "capital-theory"],
+      "datasets": [],
+      "repos":    [],
+      "related":  ["hartwick-1977", "dasgupta-heal-1979", "hotelling-1931"],
+      "entry_author": "Arti Agarwal",
+      "entry_affil":  "IIT Kanpur",
+      "entry_date":   "2026-09",
+      "image":        ""
+    },
+    {
+      "slug":    "krutilla-1967",
+      "title":   "Conservation Reconsidered",
+      "authors": [
+        { "name": "John V. Krutilla", "url": "" }
+      ],
+      "year":    1967,
+      "journal": "American Economic Review",
+      "doi":     "",
+      "section": "krutilla-gallery",
+      "jel":     ["Q5", "Q2"],
+      "topics":  ["existence-value", "irreversibility", "non-use-value", "conservation"],
+      "datasets": [],
+      "repos":    [],
+      "related":  ["weitzman-1974-prices-quantities"],
+      "entry_author": "Arti Agarwal",
+      "entry_affil":  "IIT Kanpur",
+      "entry_date":   "2026-09",
+      "image":        ""
+    }
+  ]
+}

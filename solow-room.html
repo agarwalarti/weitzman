@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>The Solow Room — Theory &amp; Dynamic Optimisation | The Weitzman Archive</title>
+  <meta name="description" content="Pure theory, dynamic optimisation models, capital theory, shadow pricing, and the mathematics of resource scarcity across time. Named for Robert M. Solow.">
+  <link rel="canonical" href="https://weitzmanarchive.com/solow-room.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="The Solow Room — The Weitzman Archive">
+  <meta property="og:description" content="Pure theory, dynamic optimisation models, capital theory, and the mathematics of resource scarcity across time.">
+  <meta property="og:url"         content="https://weitzmanarchive.com/solow-room.html">
+  <meta property="og:image"       content="https://weitzmanarchive.com/assets/images/solow-room-og.jpg">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📜</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Castoro:ital@0;1&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/category.css">
+
+  <!-- Section accent: set --accent for this page -->
+  <style>
+    :root { --accent: #7A1603; }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ──────────────────────────────────────────── -->
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="site-wordmark">The Weitzman Archive</a>
+
+    <div class="nav-right">
+
+      <div class="nav-item">
+        <button class="nav-btn" aria-expanded="false" aria-haspopup="true">
+          Sections
+          <svg class="chevron" viewBox="0 0 10 6" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="nav-dropdown" role="menu">
+          <div class="nav-dropdown-section">
+            <span class="nav-dropdown-label">Named Sections</span>
+            <a href="solow-room.html" role="menuitem" aria-current="page">
+              <span class="nav-dot" style="background:#7A1603"></span>The Solow Room — Theory
+            </a>
+            <a href="pigou-lab.html" role="menuitem">
+              <span class="nav-dot" style="background:#042C4E"></span>The Pigou Lab — Empirics
+            </a>
+            <a href="krutilla-gallery.html" role="menuitem">
+              <span class="nav-dot" style="background:#BF9000"></span>The Krutilla Gallery — Transdisciplinary
+            </a>
+            <a href="long-equilibrium.html" role="menuitem">
+              <span class="nav-dot" style="background:#1B4332"></span>The Long Equilibrium — Game Theory
+            </a>
+            <a href="nordhaus-index.html" role="menuitem">
+              <span class="nav-dot" style="background:#2E3F50"></span>The Nordhaus Index — Data &amp; Repos
+            </a>
+          </div>
+          <div class="nav-dropdown-section">
+            <a href="gazette.html" role="menuitem">
+              <span class="nav-dot" style="background:#5B2D8E"></span>The Gazette — Essays &amp; Analysis
+            </a>
+            <a href="ciriacy-wantrup.html" role="menuitem">
+              <span class="nav-dot" style="background:#888"></span>Ciriacy-Wantrup — Field Timeline
+            </a>
+            <a href="marshall-notes.html" role="menuitem">
+              <span class="nav-dot" style="background:#888"></span>Marshall Notes
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <button class="nav-btn" aria-expanded="false" aria-haspopup="true">
+          JEL Codes
+          <svg class="chevron" viewBox="0 0 10 6" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="nav-dropdown" role="menu">
+          <div class="nav-dropdown-section">
+            <span class="nav-dropdown-label">Environmental &amp; Resource</span>
+            <a href="jel-q0.html"  role="menuitem"><span class="nav-dot" style="background:#7A1603"></span>Q0 — General</a>
+            <a href="jel-q1.html"  role="menuitem"><span class="nav-dot" style="background:#7A1603"></span>Q1 — Agriculture</a>
+            <a href="jel-q2.html"  role="menuitem"><span class="nav-dot" style="background:#7A1603"></span>Q2 — Renewable Resources</a>
+            <a href="jel-q3.html"  role="menuitem"><span class="nav-dot" style="background:#7A1603"></span>Q3 — Nonrenewable Resources</a>
+            <a href="jel-q4.html"  role="menuitem"><span class="nav-dot" style="background:#7A1603"></span>Q4 — Energy</a>
+            <a href="jel-q5.html"  role="menuitem"><span class="nav-dot" style="background:#7A1603"></span>Q5 — Environmental Economics</a>
+          </div>
+          <div class="nav-dropdown-section">
+            <span class="nav-dropdown-label">Related</span>
+            <a href="jel-c6.html" role="menuitem"><span class="nav-dot" style="background:#888"></span>C6 — Mathematical Methods</a>
+            <a href="jel-d8.html" role="menuitem"><span class="nav-dot" style="background:#888"></span>D8 — Information &amp; Uncertainty</a>
+            <a href="jel-h2.html" role="menuitem"><span class="nav-dot" style="background:#888"></span>H2 — Taxation &amp; Subsidies</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-sep" aria-hidden="true"></div>
+      <a href="papers.html"  class="nav-link">Search</a>
+      <a href="about.html"   class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── MAIN CONTENT ───────────────────────────────────────────── -->
+<main class="page" id="main-content">
+
+  <!-- Section masthead -->
+  <header class="cat-masthead">
+    <p class="cat-kicker">Theory · Dynamic Optimisation · Intergenerational Equity</p>
+    <h1 class="cat-title">The Solow Room</h1>
+    <div class="cat-rule" role="presentation"></div>
+
+    <!-- Portrait of Robert M. Solow -->
+    <div class="cat-portrait">
+      <div class="portrait-ident">
+        <div class="portrait-name">Robert M. Solow</div>
+        <div class="portrait-dates">1924 – 2023</div>
+        <div class="portrait-accent-rule"></div>
+        <div class="portrait-meta">
+          Nobel Laureate in Economics, 1987<br>
+          MIT Department of Economics<br>
+          President, American Economic Association, 1979
+        </div>
+      </div>
+      <p class="portrait-text">
+        <strong>Robert M. Solow</strong> showed that the long-run path of an economy need not
+        exhaust itself against resource limits — if capital accumulation and technological
+        progress move fast enough, each generation can bequeath the next at least as much
+        productive capacity as it inherited. His 1974 paper
+        <em>Intergenerational Equity and Exhaustible Resources</em> made this intuition
+        rigorous, establishing the sustainability condition — later formalised as the
+        Hartwick Rule — that still anchors resource economics today.
+        The Solow Room collects theoretical work in this tradition: dynamic optimisation
+        models, capital theory, shadow pricing, and the mathematics of scarcity over time.
+        Papers here ask not what we found in the data, but what the structure of the
+        problem itself implies — and why that structure matters for the choices every
+        generation must make about resources it did not create and cannot replace.
+      </p>
+    </div>
+
+    <!-- Section palette chip row -->
+    <div class="palette-row" aria-label="All sections">
+      <span class="palette-row-label">All sections</span>
+      <a href="solow-room.html"      class="palette-chip" style="color:#7A1603">Solow Room</a>
+      <a href="pigou-lab.html"       class="palette-chip" style="color:#042C4E">Pigou Lab</a>
+      <a href="krutilla-gallery.html"class="palette-chip" style="color:#BF9000">Krutilla Gallery</a>
+      <a href="long-equilibrium.html"class="palette-chip" style="color:#1B4332">Long Equilibrium</a>
+      <a href="nordhaus-index.html"  class="palette-chip" style="color:#2E3F50">Nordhaus Index</a>
+      <a href="gazette.html"         class="palette-chip" style="color:#5B2D8E">The Gazette</a>
+    </div>
+  </header>
+
+  <!-- Filter bar -->
+  <div class="filter-bar" role="group" aria-label="Filter papers by topic">
+    <span class="filter-label">Filter</span>
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="dynamic-models">Dynamic models</button>
+    <button class="filter-btn" data-filter="capital-theory">Capital theory</button>
+    <button class="filter-btn" data-filter="instrument-choice">Instrument choice</button>
+    <button class="filter-btn" data-filter="exhaustible-resources">Exhaustible resources</button>
+    <button class="filter-btn" data-filter="discount-rates">Discount rates</button>
+  </div>
+
+  <!-- ── Featured paper cards (top 5) ────────────────────────── -->
+  <section class="featured-papers" aria-label="Featured papers">
+    <div class="section-head">
+      <h2 class="section-head-title">Papers in the Solow Room</h2>
+      <span style="font-family:'Rubik',sans-serif;font-size:0.75rem;color:var(--muted)">24 papers</span>
+    </div>
+
+    <!-- Card 1 -->
+    <article class="featured-card">
+      <div class="featured-card-img img-placeholder">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+        <span class="img-section-label">SOLOW ROOM</span>
+      </div>
+      <div class="featured-card-body">
+        <div>
+          <span class="featured-card-tag">Solow Room · 1974</span>
+          <a href="weitzman-1974-prices-quantities.html" class="featured-card-title">
+            Prices vs. Quantities
+          </a>
+          <p class="featured-card-blurb">
+            When a regulator faces uncertainty about the costs of abatement, should it set
+            a price on pollution or impose a quantity limit? Weitzman's answer — that the
+            choice depends on the relative slopes of the marginal benefit and cost curves —
+            remains the foundational result in instrument choice under uncertainty, and still
+            drives every carbon pricing debate.
+          </p>
+        </div>
+        <div class="featured-card-meta">
+          <span class="meta-author">Martin L. Weitzman</span>
+          <span>Quarterly Journal of Economics</span>
+          <span>1974</span>
+          <span class="jel-tag" style="color:#7A1603">Q5</span>
+          <span class="jel-tag" style="color:#7A1603">D8</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="featured-card">
+      <div class="featured-card-img img-placeholder">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+        <span class="img-section-label">SOLOW ROOM</span>
+      </div>
+      <div class="featured-card-body">
+        <div>
+          <span class="featured-card-tag">Solow Room · 1931</span>
+          <a href="hotelling-1931.html" class="featured-card-title">
+            The Economics of Exhaustible Resources
+          </a>
+          <p class="featured-card-blurb">
+            The price of a non-renewable resource in a competitive market must rise at the
+            rate of interest. This is the foundational result in resource economics —
+            every subsequent extraction model either builds on Hotelling's rule or argues
+            with it. Fifty years later it remains both indispensable and contested.
+          </p>
+        </div>
+        <div class="featured-card-meta">
+          <span class="meta-author">Harold Hotelling</span>
+          <span>Journal of Political Economy</span>
+          <span>1931</span>
+          <span class="jel-tag" style="color:#7A1603">Q3</span>
+          <span class="jel-tag" style="color:#7A1603">Q5</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="featured-card">
+      <div class="featured-card-img img-placeholder">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+        <span class="img-section-label">SOLOW ROOM</span>
+      </div>
+      <div class="featured-card-body">
+        <div>
+          <span class="featured-card-tag">Solow Room · 1974</span>
+          <a href="solow-1974.html" class="featured-card-title">
+            Intergenerational Equity and Exhaustible Resources
+          </a>
+          <p class="featured-card-blurb">
+            If utility must be non-decreasing across generations and a resource is essential
+            to production, what extraction path is optimal? Solow's answer defines the
+            sustainability constraint that anchors the Hartwick rule and still frames
+            debates about green national accounts and genuine savings today.
+          </p>
+        </div>
+        <div class="featured-card-meta">
+          <span class="meta-author">Robert M. Solow</span>
+          <span>Review of Economic Studies</span>
+          <span>1974</span>
+          <span class="jel-tag" style="color:#7A1603">Q0</span>
+          <span class="jel-tag" style="color:#7A1603">D9</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 4 -->
+    <article class="featured-card">
+      <div class="featured-card-img img-placeholder">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+        <span class="img-section-label">SOLOW ROOM</span>
+      </div>
+      <div class="featured-card-body">
+        <div>
+          <span class="featured-card-tag">Solow Room · 1974</span>
+          <a href="dasgupta-heal-1974.html" class="featured-card-title">
+            On the Optimal Depletion of Exhaustible Resources
+          </a>
+          <p class="featured-card-blurb">
+            A rigorous treatment of the optimal control problem for resource extraction,
+            characterising the shadow price path and the conditions under which backstop
+            technologies alter the extraction decision. The paper that showed Hotelling's
+            rule survives in a full general equilibrium framework.
+          </p>
+        </div>
+        <div class="featured-card-meta">
+          <span class="meta-author">Partha Dasgupta &amp; Geoffrey Heal</span>
+          <span>Review of Economic Studies</span>
+          <span>1974</span>
+          <span class="jel-tag" style="color:#7A1603">Q3</span>
+          <span class="jel-tag" style="color:#7A1603">C6</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 5 -->
+    <article class="featured-card">
+      <div class="featured-card-img img-placeholder">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+        <span class="img-section-label">SOLOW ROOM</span>
+      </div>
+      <div class="featured-card-body">
+        <div>
+          <span class="featured-card-tag">Solow Room · 2001</span>
+          <a href="weitzman-2001-gamma.html" class="featured-card-title">
+            Gamma Discounting
+          </a>
+          <p class="featured-card-blurb">
+            When there is genuine uncertainty about the appropriate discount rate, the
+            effective social discount rate should decline over time — a result with large
+            consequences for how we value long-run environmental investments and obligations
+            to future generations. Weitzman's approach resolves a long-standing puzzle
+            about declining discount rates without arbitrariness.
+          </p>
+        </div>
+        <div class="featured-card-meta">
+          <span class="meta-author">Martin L. Weitzman</span>
+          <span>American Economic Review</span>
+          <span>2001</span>
+          <span class="jel-tag" style="color:#7A1603">Q5</span>
+          <span class="jel-tag" style="color:#7A1603">D9</span>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ── Compact paper list for remaining papers ──────────────── -->
+  <section class="papers-list" aria-label="More papers in the Solow Room">
+    <h2 class="papers-list-head">More in the Solow Room</h2>
+
+    <article class="paper-row">
+      <div class="paper-year" aria-hidden="true">1977</div>
+      <div class="paper-info">
+        <a href="hartwick-1977.html" class="paper-title">
+          Hartwick's Rule for Intergenerational Equity
+        </a>
+        <p class="paper-blurb">
+          If a society invests resource rents from exhaustible resource extraction into
+          reproducible capital, per-capita consumption can be kept constant over time.
+          A clean, usable sustainability condition derived directly from Solow's framework.
+        </p>
+        <div class="paper-meta">
+          <span class="meta-author">John M. Hartwick</span>
+          <span>American Economic Review</span>
+          <span>1977</span>
+          <span class="jel-tag" style="color:#7A1603">Q0</span>
+          <span class="jel-tag" style="color:#7A1603">O4</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="paper-row">
+      <div class="paper-year" aria-hidden="true">1979</div>
+      <div class="paper-info">
+        <a href="dasgupta-heal-1979.html" class="paper-title">
+          Economic Theory and Exhaustible Resources
+        </a>
+        <p class="paper-blurb">
+          The definitive theoretical treatment of exhaustible and renewable resource
+          economics — optimal extraction paths, royalties, backstop technologies, and
+          the welfare economics of resource depletion over time. Still the reference
+          that graduate students are sent to first.
+        </p>
+        <div class="paper-meta">
+          <span class="meta-author">Partha Dasgupta &amp; Geoffrey Heal</span>
+          <span>Cambridge University Press</span>
+          <span>1979</span>
+          <span class="jel-tag" style="color:#7A1603">Q3</span>
+          <span class="jel-tag" style="color:#7A1603">C6</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="paper-row">
+      <div class="paper-year" aria-hidden="true">1992</div>
+      <div class="paper-info">
+        <a href="leonard-long-1992.html" class="paper-title">
+          Optimal Control Theory and Static Optimization in Economics
+        </a>
+        <p class="paper-blurb">
+          The mathematical backbone for dynamic resource models — optimal control,
+          Pontryagin's maximum principle, and static optimisation, presented for
+          economists. A reference that underpins a significant share of the theoretical
+          apparatus across the Solow Room and the Long Equilibrium.
+        </p>
+        <div class="paper-meta">
+          <span class="meta-author">Daniel Léonard &amp; Ngo Van Long</span>
+          <span>Cambridge University Press</span>
+          <span>1992</span>
+          <span class="jel-tag" style="color:#7A1603">C6</span>
+          <span class="jel-tag" style="color:#7A1603">Q3</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="paper-row">
+      <div class="paper-year" aria-hidden="true">1994</div>
+      <div class="paper-info">
+        <a href="weitzman-1994-discount.html" class="paper-title">
+          On the Discount Rate for Public Investment
+        </a>
+        <p class="paper-blurb">
+          How should the government discount future costs and benefits when evaluating
+          long-lived investments? Weitzman establishes the conditions under which the
+          social discount rate diverges from the market rate — with direct implications
+          for climate policy evaluation and infrastructure appraisal.
+        </p>
+        <div class="paper-meta">
+          <span class="meta-author">Martin L. Weitzman</span>
+          <span>American Economic Review</span>
+          <span>1994</span>
+          <span class="jel-tag" style="color:#7A1603">H4</span>
+          <span class="jel-tag" style="color:#7A1603">Q5</span>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+</main>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-wordmark">The Weitzman Archive</span>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="marshall-notes.html">Marshall Notes</a>
+      <a href="ciriacy-wantrup.html">Timeline</a>
+    </div>
+    <span class="footer-copy">&copy; 2026 The Weitzman Archive</span>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+</body>
+</html>
