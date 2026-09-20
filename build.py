@@ -62,43 +62,42 @@ md_processor = markdown.Markdown(
 # ── LATEX / KATEX HANDLING ─────────────────────────────────────
 def protect_math(text):
     """
-    Pull math out of the text before markdown processes it,
-    so markdown doesn't corrupt LaTeX syntax.
-    Returns (protected_text, math_store) where math_store maps
-    placeholder tokens back to the original math strings.
+    Pull math out of the text before markdown processes it so
+    markdown doesn't corrupt LaTeX syntax (underscores, asterisks etc).
+    Stores the original math WITH its delimiters intact so KaTeX's
+    renderMathInElement can find and render them in the browser.
+    Returns (protected_text, math_store).
     """
     store = {}
     counter = [0]
 
-    def _store(m, display):
+    def _store(m, restored):
         key = f"MATHTOKEN{counter[0]}ENDTOKEN"
         counter[0] += 1
-        latex = m.group(1)
-        if display:
-            store[key] = f'<div class="katex-display">{latex}</div>'
-        else:
-            store[key] = f'\\({latex}\\)'
+        store[key] = restored
         return key
 
-    # Display math: $$...$$ and \[...\]
+    # Display math: $$...$$ → restore as $$...$$
     text = re.sub(r'\$\$(.*?)\$\$',
-                  lambda m: _store(m, display=True),
+                  lambda m: _store(m, f'$${m.group(1)}$$'),
                   text, flags=re.DOTALL)
+    # Display math: \[...\] → restore as \[...\]
     text = re.sub(r'\\\[(.*?)\\\]',
-                  lambda m: _store(m, display=True),
+                  lambda m: _store(m, f'\\[{m.group(1)}\\]'),
                   text, flags=re.DOTALL)
-    # Inline math: $...$ and \(...\)
+    # Inline math: $...$ → restore as \(...\) (safer in HTML)
     text = re.sub(r'(?<!\$)\$(?!\$)(.*?)(?<!\$)\$(?!\$)',
-                  lambda m: _store(m, display=False),
+                  lambda m: _store(m, f'\\({m.group(1)}\\)'),
                   text)
+    # Inline math: \(...\) → restore as-is
     text = re.sub(r'\\\((.*?)\\\)',
-                  lambda m: _store(m, display=False),
+                  lambda m: _store(m, f'\\({m.group(1)}\\)'),
                   text)
     return text, store
 
 
 def restore_math(html, store):
-    """Replace placeholder tokens with the original math HTML."""
+    """Replace placeholder tokens with the original math (delimiters intact)."""
     for key, value in store.items():
         html = html.replace(key, value)
     return html
