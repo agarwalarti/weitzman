@@ -43,7 +43,7 @@ OUT_DIR    = ROOT   # HTML files go to root
 # Section config: slug → (display name, accent colour, og image)
 SECTIONS = {
     "solow-room":       ("The Solow Room",        "#7A1603", "solow-room.jpg"),
-    "pigou-lab":        ("The Pigou Lab",          "#004AAD", "pigou-lab.jpg"),
+    "pigou-lab":        ("The Pigou Lab",          "#0097B2", "pigou-lab.jpg"),
     "krutilla-gallery": ("The Krutilla Gallery",   "#FEBE10", "krutilla-gallery.jpg"),
     "long-equilibrium": ("The Long Equilibrium",   "#1B4332", "long-equilibrium.jpg"),
     "nordhaus-index":   ("The Nordhaus Index",     "#2E3F50", "nordhaus-index.jpg"),
@@ -390,7 +390,7 @@ def build_html(meta, sections):
           <div class="nav-dropdown-section">
             <span class="nav-dropdown-label">Named Sections</span>
             <a href="solow-room.html" role="menuitem"><span class="nav-dot" style="background:#7A1603"></span>The Solow Room — Theory</a>
-            <a href="pigou-lab.html" role="menuitem"><span class="nav-dot" style="background:#004AAD"></span>The Pigou Lab — Empirics</a>
+            <a href="pigou-lab.html" role="menuitem"><span class="nav-dot" style="background:#0097B2"></span>The Pigou Lab — Empirics</a>
             <a href="krutilla-gallery.html" role="menuitem"><span class="nav-dot" style="background:#FEBE10"></span>The Krutilla Gallery — Transdisciplinary</a>
             <a href="long-equilibrium.html" role="menuitem"><span class="nav-dot" style="background:#1B4332"></span>The Long Equilibrium — Game Theory</a>
             <a href="nordhaus-index.html" role="menuitem"><span class="nav-dot" style="background:#2E3F50"></span>The Nordhaus Index — Data &amp; Repos</a>
