@@ -199,8 +199,12 @@
 }
 
 .cat-card:hover {
-  background: var(--bg-tint);
+  background: color-mix(in srgb, var(--cat-color) 5%, var(--bg));
   border-left-color: var(--cat-color);
+}
+
+.cat-card:hover .cat-name {
+  color: var(--cat-color);
 }
 
 .cat-color-bar {
@@ -218,6 +222,7 @@
   margin-bottom: 0.2rem;
   letter-spacing: -0.005em;
   display: block;
+  transition: color 0.15s;
 }
 
 .cat-domain {
@@ -354,14 +359,22 @@
   background: var(--bg);
   padding: 1.4rem 1.4rem 1.3rem;
   display: block;
-  transition: background 0.15s;
+  transition: background 0.18s, border-top-color 0.18s;
   border-top: 2px solid transparent;
   position: relative;
 }
 
 .art-card:hover {
-  background: var(--bg-tint);
+  background: color-mix(in srgb, var(--card-color) 4%, var(--bg));
   border-top-color: var(--card-color);
+}
+
+.art-card:hover .art-card-title {
+  color: var(--card-color);
+}
+
+.art-card:hover .art-card-img {
+  background: color-mix(in srgb, var(--card-color) 10%, var(--bg));
 }
 
 .art-card-badge {
@@ -399,10 +412,11 @@
   margin-bottom: 0.4rem;
   letter-spacing: -0.005em;
   display: block;
+  transition: color 0.18s;
 }
 
-.art-card-title:hover {
-  color: var(--card-color);
+.art-card-img {
+  transition: background 0.18s;
 }
 
 .art-card-blurb {
@@ -429,6 +443,27 @@
 .art-card-meta .meta-author {
   font-weight: 500;
   color: var(--ink-mid);
+}
+
+/* ── PAPER IMAGE — real image vs placeholder ───────────────── */
+/* When a real image is present, .art-card-img holds an <img> tag */
+.art-card-img img,
+.recent-feature-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.18s;
+}
+
+.art-card:hover .art-card-img img {
+  opacity: 0.9;
+}
+
+/* Recent feature image — real image handling */
+.recent-feature-img img {
+  position: absolute;
+  inset: 0;
 }
 
 /* ── GAZETTE STRIP ─────────────────────────────────────────── */

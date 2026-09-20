@@ -223,10 +223,21 @@
   margin-bottom: 0.8rem;
   letter-spacing: -0.01em;
   display: block;
+  transition: color 0.18s;
 }
 
 .featured-card-title:hover {
   color: var(--accent);
+}
+
+/* Image handling inside featured cards */
+.featured-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  inset: 0;
 }
 
 .featured-card-blurb {
@@ -292,6 +303,7 @@
   line-height: 1;
   padding-top: 0.15rem;
   letter-spacing: -0.02em;
+  transition: opacity 0.15s;
 }
 
 .paper-info {}
@@ -305,10 +317,16 @@
   margin-bottom: 0.35rem;
   letter-spacing: -0.005em;
   display: block;
+  transition: color 0.15s;
 }
 
 .paper-title:hover {
   color: var(--accent);
+}
+
+/* Year ghost numeral tints on row hover */
+.paper-row:hover .paper-year {
+  opacity: 0.28;
 }
 
 .paper-blurb {
