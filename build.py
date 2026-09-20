@@ -236,18 +236,14 @@ def build_html(meta, sections):
     sec_name, accent, sec_og = SECTIONS.get(section, ("", "#333", "og-default.jpg"))
 
     # Resolve display image
-    if meta["image"]:
-        og_image = f"assets/images/papers/{meta['image']}"
-        hero_img = f'<img src="{og_image}" alt="{meta["title"]}">'
-    else:
-        og_image = f"assets/images/sections/{sec_og}"
-        hero_img = f'''
-        <svg width="90" height="90" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="0.6" aria-hidden="true">
-          <rect x="3" y="3" width="18" height="18"/>
-          <path d="M3 9h18M9 21V9"/>
-        </svg>
-        <span class="article-hero-label">{sec_name.upper()}</span>'''
+    # Paper-specific image takes priority; always falls back to section placeholder
+    paper_img = f"assets/images/papers/{meta['image']}" if meta["image"] else f"assets/images/papers/{slug}.jpg"
+    og_image  = paper_img if meta["image"] else f"assets/images/sections/{sec_og}"
+    hero_img  = (
+        f'<img src="{paper_img}"\n'
+        f'         onerror="this.src=\'assets/images/sections/{sec_og}\'"\n'
+        f'         alt="{meta["title"]}">'
+    )
 
     # Convert sections to HTML
     plain_html   = md_to_html(sections["plain_english"])
